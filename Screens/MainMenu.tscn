@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkn8wvp5g1y50"]
+
+[ext_resource type="Texture2D" uid="uid://bph68ow2bep2d" path="res://Resources/Menu.svg" id="1_7hncx"]
+[ext_resource type="Texture2D" uid="uid://ddla4wcm4n88e" path="res://Resources/Settings.svg" id="2_1qgcg"]
+[ext_resource type="Texture2D" uid="uid://fdypukx0syp3" path="res://Resources/Group.svg" id="2_42vv1"]
+[ext_resource type="Texture2D" uid="uid://btfv7hp8ve78q" path="res://Resources/Agent.svg" id="4_vkl74"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4, 0, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SideBar" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/SideBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="TopMenu" type="VBoxContainer" parent="HBoxContainer/SideBar/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Hamburger" type="Button" parent="HBoxContainer/SideBar/MarginContainer/TopMenu"]
+layout_mode = 2
+icon = ExtResource("1_7hncx")
+flat = true
+icon_alignment = 1
+
+[node name="Gallery" type="Button" parent="HBoxContainer/SideBar/MarginContainer/TopMenu"]
+layout_mode = 2
+icon = ExtResource("2_42vv1")
+flat = true
+icon_alignment = 1
+
+[node name="Settings" type="Button" parent="HBoxContainer/SideBar/MarginContainer/TopMenu"]
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("2_1qgcg")
+flat = true
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Gibbon Studio"
+horizontal_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 1
+max_columns = 4
+icon_mode = 0
+item_0/text = "Agent 1"
+item_0/icon = ExtResource("4_vkl74")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 44
